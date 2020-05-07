@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 07, 2020 at 10:51 AM
+-- Generation Time: May 07, 2020 at 11:04 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -92,7 +92,7 @@ CREATE TABLE `guru` (
   `no_tlp` varchar(255) DEFAULT NULL,
   `bidang` varchar(50) DEFAULT NULL,
   `nilai_guru` double(11,2) DEFAULT 0.00,
-  `status_guru` varchar(20) DEFAULT NULL
+  `status_guru` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -101,8 +101,8 @@ CREATE TABLE `guru` (
 
 INSERT INTO `guru` (`id_guru`, `nama_guru`, `jk`, `tempat`, `tgl_lahir`, `alamat`, `no_tlp`, `bidang`, `nilai_guru`, `status_guru`) VALUES
 (1, 'Koko', 'Laki-laki', 'Serang', '2020-05-01', 'Serang', '03943049', 'Guru Tetap', 4.00, 'Masuk Klasifikasi'),
-(2, 'Dani', 'Laki-laki', 'Serang', '2019-08-20', 'Serang', '032838923', 'Guru Tetap', 3.00, 'LULUS'),
-(3, 'Rizki', 'Laki-laki', 'Serang', '2020-05-18', 'Serang', '0434889', 'Guru Tetap', 2.00, 'TIDAK LULUS');
+(2, 'Dani', 'Laki-laki', 'Serang', '2019-08-20', 'Serang', '032838923', 'Guru Tetap', 3.00, 'Masuk Klasifikasi'),
+(3, 'Rizki', 'Laki-laki', 'Serang', '2020-05-18', 'Serang', '0434889', 'Guru Tetap', 2.00, 'Tidak Masuk Klasifikasi');
 
 -- --------------------------------------------------------
 
@@ -236,10 +236,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `role`, `email`, `img`) VALUES
-(4, 'Jatnika', 'enjat', '$2y$10$41UtNJc5QFJbgLWtqDZm..ziGXPFlKziMHowHFT68PfsCzvuuIfLW', 'Administrator', 'Serang@gmail.com', '5a1111bdc7dbd.png'),
-(5, 'jat', '123', '$2y$10$4ldzNm8kx.r2JWQxY333neTlHE6kCN4VZtKaTwDto5NsRR/5O4i.S', 'Administrator', 'Serang@gmail.com', 'user.png'),
-(10, 'Koko', 'Koko', '$2y$10$41UtNJc5QFJbgLWtqDZm..ziGXPFlKziMHowHFT68PfsCzvuuIfLW', 'siswa', NULL, 'avatar.png'),
-(11, 'wahyu', 'wahyu', '$2y$10$41UtNJc5QFJbgLWtqDZm..ziGXPFlKziMHowHFT68PfsCzvuuIfLW', 'siswa', NULL, 'avatar.png');
+(4, 'Admin', 'admin', '$2y$10$41UtNJc5QFJbgLWtqDZm..ziGXPFlKziMHowHFT68PfsCzvuuIfLW', 'Administrator', 'Serang@gmail.com', '5a1111bdc7dbd.png');
 
 --
 -- Indexes for dumped tables
