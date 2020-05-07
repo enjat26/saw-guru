@@ -45,7 +45,7 @@ $html .='<div style="float:left; width:700px;">&nbsp;</div>
         <br>
 
         <div style="float:left; width:700px;">&nbsp;</div>
-        <div style="float:width:200px;"><b><u>Fauziah, SE.,M.Si</u></b><br>NIP. 19641208 19860 32 001</div>
+        <div style="float:width:200px;"><b><u>Hj. Dedeh Komarawati, S.Pd., MM</u></b><br>NIP. 19641208 19860 32 001</div>
 ';
 $mpdf->SetTitle('Laporan Data guru');
 $mpdf->WriteHTML($stylesheet,1);

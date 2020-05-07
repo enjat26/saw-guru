@@ -11,14 +11,14 @@ $html = '<br><h2 style="font-family:arial; text-align:center;">Laporan Rangking<
 $id_penilaian=$_GET['kp'];
 $bidang=$_GET['jr'];
 $cari = $_GET['l'];
-if($cari == 'Lulus'){
+if($cari == 'Masuk Klasifikasi'){
     $q = "SELECT a.* FROM guru a JOIN penilaian_dt b
     ON a.id_guru=b.id_guru WHERE a.bidang = '$bidang' AND b.id_penilaian='$id_penilaian' 
-    AND a.status_guru ='LULUS' GROUP BY a.id_guru";
-}else if($cari == 'Tidak Lulus'){
+    AND a.status_guru ='Masuk Klasifikasi' GROUP BY a.id_guru";
+}else if($cari == 'Tidak Masuk Klasifikasi'){
     $q = "SELECT a.* FROM guru a JOIN penilaian_dt b
     ON a.id_guru=b.id_guru WHERE a.bidang = '$bidang' AND b.id_penilaian='$id_penilaian' 
-    AND a.status_guru ='TIDAK LULUS' GROUP BY a.id_guru";
+    AND a.status_guru ='Tidak Masuk Klasifikasi' GROUP BY a.id_guru";
 }else{
     $q = "SELECT a.* FROM guru a JOIN penilaian_dt b
     ON a.id_guru=b.id_guru WHERE a.bidang = '$bidang' AND b.id_penilaian='$id_penilaian' 
@@ -42,8 +42,7 @@ $html .='<table>
         <table>
         <tr>
             <th class="kolom">No</th>
-            <th class="kolom">No Tes</th>
-            <th class="kolom">Nama</th>
+            <th class="kolom">Nama Guru</th>
             <th class="kolom">Jenis Kelamin</th>
             <th class="kolom">Tempat, Tgl Lahir</th>
             <th class="kolom">Alamat</th>
@@ -60,7 +59,6 @@ $html .='
 <tr>';
             $html .='
             <td class="kolom">'.$no.'</td>
-            <td class="kolom">'.$rPl["no_tes"].'</td>
             <td class="kolom">'.$rPl["nama_guru"].'</td>
             <td class="kolom">'.$rPl["jk"].'</td>
             <td class="kolom">'.$rPl["tempat"].', '.date("d M y", strtotime($rPl["tgl_lahir"])).'</td>
@@ -82,7 +80,7 @@ $html .='<div style="float:left; width:700px;">&nbsp;</div>
         <br>
 
         <div style="float:left; width:700px;">&nbsp;</div>
-        <div style="float:width:200px;"><b><u>Fauziah, SE.,M.Si</u></b><br>NIP. 19641208 19860 32 001</div>
+        <div style="float:width:200px;"><b><u>Hj. Dedeh Komarawati, S.Pd., MM</u></b><br>NIP. 19641208 19860 32 001</div>
 ';
 $mpdf->SetTitle('Laporan Data Rangking');
 $mpdf->WriteHTML($stylesheet,1);

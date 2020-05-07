@@ -7,7 +7,7 @@ $menumenu = $_GET['menu'];
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.php?menu=home&menu=dashboard">Penilaian Kinerja Guru - Sistem Pendukung Keputusan </a>
+                <a class="navbar-brand" href="index.php?menu=home">Penilaian Kinerja Guru - Sistem Pendukung Keputusan </a>
                 
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
